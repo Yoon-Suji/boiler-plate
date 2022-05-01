@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
-const {User} = require('./models/User');
+const {User} = require('./config/models/User');
 const config = require('./config/key');
-const {auth} = require('./middleware/auth');
+const {auth} = require('./config/middleware/auth');
 const cookieParser = require('cookie-parser');
 
 const mongoose = require('mongoose');
