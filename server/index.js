@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const bodyParser = require('body-parser');
 const {User} = require('./config/models/User');
 const config = require('./config/key');
@@ -24,6 +24,8 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
   res.send('Hello World!');
 })
+
+app.get('/api/hello', (req, res) => res.send('Hello World'))
 
 app.post('/api/users/register', (req, res) => {
 
